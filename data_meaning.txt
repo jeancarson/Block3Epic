@@ -1,0 +1,41 @@
+T Stage: Size of the main tumor. Numbered 1-4, with 1 being the smallest and 4 the biggest
+
+N Stage: Number of nearby lymph nodes that have cancer. N0 means cancer has not spread, N1-3 means it has, severity increasing with Number
+
+
+6th stage: https://www.patientpower.info/breast-cancer/breast-cancer-stages
+            essentially, a measure of how far the cancer has progressed. You've most lkely heard of stage 1-4 cancers, this just has subgroups.
+            in increasing order: IA, IB, IIA, IIB, IIC, IIIA, IIIB, IIIC, IV. So 1-4 but in roman numerals, and then a sub group. For more 
+            info on what each stage entails, see link.
+
+Differenciate: this describes how much or how little tumor tissue looks like the normal tissue it came from. Well-differentiated cancer cells
+             look more like normal cells and tend to grow and spread more slowly than poorly differentiated or undifferentiated cancer cells.
+             Poorer differenciation = WORSE cancer
+
+Grade: The grade describes the appearance of the cancerous cells. Used in tandem with differenciation. Or as an alternative to the t, n values above.
+        The number stages are:
+
+            stage 0 – the cancer is where it started (in situ) and hasn't spread
+            stage 1 – the cancer is small and hasn't spread anywhere else
+            stage 2 – the cancer has grown, but hasn't spread
+            stage 3 – the cancer is larger and may have spread to the surrounding tissues and/or the lymph nodes (or "glands", part of the immune system)
+            stage 4 – the cancer has spread from where it started to at least 1 other body organ, also known as "secondary" or "metastatic" cancer
+
+
+A stage: Regional—Cancer has spread to nearby lymph nodes, tissues, or organs. Distant—Cancer has spread to distant parts of the body
+
+Tumor size : self explanatory, bigger = WORSE
+
+Estrogen status: A breast cancer is estrogen receptor-positive if it has receptors for estrogen. This suggests that the cancer cells, like normal
+         breast cells, may receive signals from estrogen that tell the cells to grow
+         If positive, this is good, supposedly increases survival probability
+
+
+Progestrone status: The same as above, negative = BAD
+
+#Regional Nodes Examined: the count of lymph nodes examined in the regional area during a medical examination or surgical procedure.
+                    One could assume more = more accurate result? Average number of samples taken is usually 1.2 to 3.4
+
+#Regional nodes positive: The number of the above with cancer. Would probably use these two columns in cnjuntion and get a percentage
+
+
