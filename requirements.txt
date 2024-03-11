@@ -1,0 +1,11 @@
+
+# Specific package versions
+pandas==2.2.0
+numpy==1.26.4
+matplotlib==3.8.3
+nbformat == 4.4.0
+# Minimum version
+requests>=2.26.0
+
+# Any version
+beautifulsoup4
