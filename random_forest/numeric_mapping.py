@@ -122,3 +122,10 @@ data.duplicated().sum()
 
 
 # print(data.head())
+
+def remove_outliers_survival_months(toclean):
+    Q1 = toclean['Survival Months'].quantile(0.25)
+    Q3 = toclean['Survival Months'].quantile(0.75)
+    IQR = Q3 - Q1
+    toclean = toclean[~((toclean['Survival Months'] < (Q1 - 1.5 * IQR)) | (toclean['Survival Months'] > (Q3 + 1.5 * IQR)))]
+    return toclean
