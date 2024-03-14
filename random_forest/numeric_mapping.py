@@ -1,6 +1,7 @@
 import pandas as pd
 print("Hello World")
 data = pd.read_csv(r"C:\Users\jeanl\College\Blocks\Block 3\Epic\Block3Epic\data_copy.csv")
+# data = pd.read_csv(r"C:\Users\jeanl\College\Blocks\Block 3\Epic\Block3Epic\archive\output.csv")
 
 # Print the column names in the DataFrame
 print(data.columns)
@@ -123,9 +124,22 @@ data.duplicated().sum()
 
 # print(data.head())
 
-def remove_outliers_survival_months(toclean):
-    Q1 = toclean['Survival Months'].quantile(0.25)
-    Q3 = toclean['Survival Months'].quantile(0.75)
+def remove_outliers_tumor_size(toclean):
+    Q1 = toclean['Tumor Size'].quantile(0.25)
+    Q3 = toclean['Tumor Size'].quantile(0.75)
     IQR = Q3 - Q1
-    toclean = toclean[~((toclean['Survival Months'] < (Q1 - 1.5 * IQR)) | (toclean['Survival Months'] > (Q3 + 1.5 * IQR)))]
+    toclean = toclean[~((toclean['Tumor Size'] < (Q1 - .5*IQR)) | (toclean['Tumor Size'] > (Q3 +.5*IQR)))]
     return toclean
+
+data = pd.get_dummies(data)
+#replace this with one hot encodeing
+
+#change number nodes tested vs number nodes positive to a decimal
+def regional_node_pos_to_percent(toclean):
+    toclean['percent regional node positive'] = toclean['Reginol Node Positive'] / toclean['Regional Node Examined']
+    toclean.drop(['Regional Node Examined', 'Reginol Node Positive'], axis=1, inplace=True)
+    return toclean
+data = regional_node_pos_to_percent(data)
+print(data.head())
+
+
