@@ -1,4 +1,5 @@
-T Stage: Size of the main tumor. Numbered 1-4, with 1 being the smallest and 4 the biggest
+T Stage: Size of the main tumor. Numbered 1-4, with 1 being the smallest and 4 the biggest 
+        obviously wont be used to predict tumor size as that owuld be redundant
 
 N Stage: Number of nearby lymph nodes that have cancer. N0 means cancer has not spread, N1-3 means it has, severity increasing with Number
 
@@ -7,6 +8,7 @@ N Stage: Number of nearby lymph nodes that have cancer. N0 means cancer has not 
             essentially, a measure of how far the cancer has progressed. You've most lkely heard of stage 1-4 cancers, this just has subgroups.
             in increasing order: IA, IB, IIA, IIB, IIC, IIIA, IIIB, IIIC, IV. So 1-4 but in roman numerals, and then a sub group. For more 
             info on what each stage entails, see link.
+            This is based on T stage, N stage and size so cannot be used to predict tumor size.
 
 Differenciate: this describes how much or how little tumor tissue looks like the normal tissue it came from. Well-differentiated cancer cells
              look more like normal cells and tend to grow and spread more slowly than poorly differentiated or undifferentiated cancer cells.
@@ -23,7 +25,7 @@ Grade: The grade describes the appearance of the cancerous cells. Used in tandem
 
 
 A stage: Regional—Cancer has spread to nearby lymph nodes, tissues, or organs. Distant—Cancer has spread to distant parts of the body
-
+        partially based on t stage so not suitable to predict tumor size
 Tumor size : self explanatory, bigger = WORSE
 
 Estrogen status: A breast cancer is estrogen receptor-positive if it has receptors for estrogen. This suggests that the cancer cells, like normal
@@ -39,3 +41,6 @@ Progestrone status: The same as above, negative = BAD
 #Regional nodes positive: The number of the above with cancer. Would probably use these two columns in cnjuntion and get a percentage
 
 
+
+
+grade, lymph node measured, lymph nodes positive, n stage

@@ -39,28 +39,13 @@ def remove_outliers_tumor_size(toclean):
     Q1 = toclean['Tumor Size'].quantile(0.25)
     Q3 = toclean['Tumor Size'].quantile(0.75)
     IQR = Q3 - Q1
-    toclean = toclean[~((toclean['Tumor Size'] < (Q1 - .5*IQR)) | (toclean['Tumor Size'] > (Q3 +.5*IQR)))]
+    toclean = toclean[~((toclean['Tumor Size'] < (Q1 - 1.5*IQR)) | (toclean['Tumor Size'] > (Q3 +1.5*IQR)))]
     return toclean
 
-def remove_other_outliers(toclean):
-    outlier_indices = []
-    for col in df.columns:
-        # Skip the 'Tumor Size (mm)' column
-        if col == 'Tumor Size (mm)':
-            continue
-
-        Q1 = toclean[col].quantile(0.25)
-        Q3 = toclean[col].quantile(0.75)
-        IQR = Q3 - Q1
-
-        is_outlier = (toclean[col] < (Q1 - 1.5 * IQR)) | (toclean[col] > (Q3 + 1.5 * IQR))
-        outlier_indices.extend(toclean.index[is_outlier])
-
-    # removes duplicates from the outlier indices list
-    outlier_indices = list(set(outlier_indices))
-
-    cleaned_data = toclean.drop(outlier_indices)
-
-    return cleaned_data
-
+def remove_outliers_survival_months(toclean):
+    Q1 = toclean['Survival Months'].quantile(0.25)
+    Q3 = toclean['Survival Months'].quantile(0.75)
+    IQR = Q3 - Q1
+    toclean = toclean[~((toclean['Survival Months'] < (Q1 - .5*IQR)) | (toclean['Survival Months'] > (Q3 +.5*IQR)))]
+    return toclean
 
