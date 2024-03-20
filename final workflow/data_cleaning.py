@@ -11,7 +11,7 @@ from sklearn.calibration import LabelEncoder
 
 
 #import data
-df = pd.read_csv("/Users/miaborko/Documents/epic3/Block3Epic/data_copy.csv") #read dataset
+df = pd.read_csv("C:\Users\jeanl\College\Blocks\Block 3\Epic\Block3Epic\archive\Breast_Cancer.csv") #read dataset
 
 def clean_data(df):
     # Renaming columns
