@@ -19,12 +19,22 @@ df.drop("Race", axis=1, inplace=True)
 df.drop("differentiate", axis=1, inplace=True)
 
 
-#Onehot Encoding
-categorical_features = df.select_dtypes(include = "object").columns
-from sklearn.preprocessing import LabelEncoder
-le = LabelEncoder
-df.loc[df['Grade'] == 'anaplastic; Grade IV', 'Grade'] = 4
-df[categorical_features] = df[categorical_features].apply(LabelEncoder().fit_transform) # Encoding all categorical features
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #Removing outliers
