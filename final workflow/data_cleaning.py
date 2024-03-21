@@ -35,25 +35,6 @@ def clean_data(df):
 
     return df
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> 0c4603e2a046563006e42fe00f67bfc78c5db056
 
 
 #Removing outliers
